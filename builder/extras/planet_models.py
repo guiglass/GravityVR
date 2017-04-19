@@ -121,7 +121,7 @@ class Saturn():
         parts_per_ring = int(self.n_particles / self.ring_groups / self.ring_bands)
         for x in range(rings):
             color = self.particle_color.reshape(rings,4)[x]#self.particle_color[x % self.particle_color.shape[0]] #cycle through colors (if list of colors was passed)
-            ring_rad = (self.max_rad - self.min_rad) / (rings/(x+1))
+            ring_rad = (self.max_rad - self.min_rad) / float(rings/(x+1))
 
             create_particles(self, *get_rings(self.builder.verts_radius[-1] + ring_rad, self.builder.verts_coord[-1], vel, self.builder.verts_mass[-1], n_particles=parts_per_ring, particle_size=self.particle_size, particle_color=color, axis=self.axis, theta=self.theta))
 
