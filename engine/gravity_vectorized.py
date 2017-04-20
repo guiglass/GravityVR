@@ -169,7 +169,7 @@ class newtonianLawOfGravitation():
 
         #Otherwise use this section to just set everything to zery so particles are invisible (but will still be processed and initial array size never changes)
         indeces_collided = np.delete(np.arange(self.parts_coord.shape[0]), indeces_uncollided)
-        self.parts_coord[indeces_collided] *= 0
+        self.parts_coord[indeces_collided] = 1*10**50 #put them very far away and out of sight!
         self.parts_color[indeces_collided] *= 0
         self.parts_radius[indeces_collided] *= 0
         self.parts_vel[indeces_collided] *= 0

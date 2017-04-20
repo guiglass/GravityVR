@@ -9,7 +9,7 @@ from PyQt4.QtGui import QApplication, QMainWindow
 from PyQt4.QtOpenGL import QGLWidget, QGLFormat
 
 """
-Toy PySide application for use with "hello world" examples demonstrating pyopenvr
+Toy PySide application for use with "GravityVR" examples demonstrating pyopenvr
 """
 
 class MyGlWidget(QGLWidget):
@@ -60,7 +60,6 @@ class MyGlWidget(QGLWidget):
             self.doneCurrent()
 
     def keyPressEvent(self, event):
-        "press ESCAPE to quit the application"
         key = event.key()
         step = 0.125 / self.scene.mesh.size_scale
 
@@ -91,6 +90,7 @@ class MyGlWidget(QGLWidget):
                 self.scene.mesh.gravity.time_scale -= 10 - 0.1
         elif key == Qt.Key_Space: #reset universe
             self.scene.mesh.gravity.__reset_universe__()
+            self.scene.mesh.initialize = True #any hidden verts will now be re-shown
 
 class QtPysideApp(QApplication):
     def __init__(self, renderer, scene, title):
