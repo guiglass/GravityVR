@@ -1,6 +1,7 @@
 # GravityVR - PyOpenGL and PyOpenVR physics simulation
 
-Truely Vectorized (NxN) algorithms support Numpy and Tensorflow backends for large scale supercomputer simulations.
+Truely Vectorized (NxN) physics engine examples written in Numpy or Tensorflow.
+
 
 Originally written for Python3.5 (for future compatibility with TensorFlow on Windows) but appears to run fine using Python2.7.
 If you intend to run this in OpenVR with an HTC Vive or Oclus Rift head mounted display (HMD) then please ensure that all PyOpenVR, PyOpenGL, PyQt4 and Numpy v1.12.1+ are installed.
