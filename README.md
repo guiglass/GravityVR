@@ -1,6 +1,6 @@
 # GravityVR - PyOpenGL and PyOpenVR physics simulation
 
-A vectorized (NxN) physics engine example written in Numpy or Tensorflow.
+A vectorized (NxN) gravity physics engine example written in Numpy or Tensorflow.
 
 
 Originally written for Python3.5 (for future compatibility with TensorFlow on Windows) but appears to run fine using Python2.7.
